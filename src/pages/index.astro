@@ -1,0 +1,35 @@
+---
+import App from "../../app.json";
+import Card from "../components/Card.astro";
+import Logo from "../components/Logo.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Your new space adventure">
+  <section
+    class="lg:h-screen p-5 flex items-center flex-col justify-around lg:gap-y-10 gap-y-7 transition-all duration-300 max-w-7xl m-auto"
+  >
+    <div class="flex items-center flex-col justify-center gap-y-7">
+      <Logo />
+      <p
+        class="text-white lg:text-2xl text-lg font-medium text-center lg:w-1/2"
+      >
+        <span class="font-black">{App.name}</span>
+        {App.description.join(" ")}
+      </p>
+
+      <a href="" target="_blank">
+        <img
+          class="w-52"
+          alt="Apple Badge"
+          ondragstart="return false;"
+          src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+        />
+      </a>
+    </div>
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 mt-10">
+      {App.features.map((feature) => <Card {...feature} />)}
+    </div>
+  </section>
+</Layout>

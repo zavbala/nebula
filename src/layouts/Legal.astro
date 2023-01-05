@@ -1,0 +1,43 @@
+---
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/700.css";
+
+import { format } from "date-fns";
+import Footer from "../components/Footer.astro";
+import { THEME } from "../lib/theme";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="font-sans">
+    <header
+      class:list={[
+        THEME.base.join(" "),
+        "h-[30vh] flex flex-col gap-y-5 text-white items-center justify-center",
+      ]}
+    >
+      <h1 class="md:text-6xl text-4xl font-bold">{title}</h1>
+      <small class="text-center">Last Updated on:</small>
+    </header>
+
+    <main class="m-auto max-w-4xl lg:p-0 p-5">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

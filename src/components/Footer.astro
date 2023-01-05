@@ -1,0 +1,60 @@
+---
+import App from "../../app.json";
+import { THEME } from "../lib/theme";
+import Switch from "./Switch";
+
+const Items = [
+  {
+    tagline: "Download",
+    href: "",
+  },
+  {
+    href: "/icon.png",
+    tagline: "Press Kit",
+    download: true,
+  },
+  {
+    tagline: "Privacy Policy",
+    href: "/privacy",
+  },
+  {
+    tagline: "Contact",
+    href: `mailto:${App.contact}`,
+  },
+];
+
+const Style = "dark:text-white capitalize";
+---
+
+<footer class:list={[THEME.footer, "bg-white p-5 dark:text-white"]}>
+  <div
+    class="flex items-center justify-between md:flex-row flex-col md:order-2 order-1 gap-3 m-auto h-full max-w-6xl"
+  >
+    <Switch client:visible />
+
+    <div class="flex gap-x-5 text-sm">
+      {
+        Items.map((item, index) => (
+          <a
+            class={Style}
+            target="_blank"
+            href={item.href}
+            download={item.download || false}
+          >
+            {item.tagline}
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="flex gap-x-3 text-sm">
+      {
+        Object.entries(App.social).map(([media, value], index) => (
+          <a href={value} target="_blank" class={Style}>
+            {media}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>

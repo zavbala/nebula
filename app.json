@@ -1,0 +1,39 @@
+{
+  "ads": false,
+  "free": true,
+  "name": "Nebula",
+  "theme": "",
+  "contact": "support@nebula.app",
+  "stores": {
+    "apple": "https://apps.apple.com/us/app/nebula/id1234567890",
+    "google": "https://play.google.com/store/apps/details?id=com.nebula.app"
+  },
+  "description": [
+    "is a powerful and user-friendly navigation app.",
+    "You can easily plan and track your travels through space, whether you're a seasoned astronaut or a space exploration enthusiast.",
+    "With real-time updates and detailed maps, helps you stay on course and reach your destination with ease."
+  ],
+  "features": [
+    {
+      "title": "Space Travel",
+      "body": "Plan and track your space travels using detailed maps and real-time updates."
+    },
+    {
+      "title": "Destination Tracker",
+      "body": "View your current location and track your progress towards your destination."
+    },
+    {
+      "title": "Journey Alerts",
+      "body": "Set alerts for important events or landmarks along your journey."
+    },
+    {
+      "title": "Map Customization",
+      "body": "Customize your map display with different themes and overlays."
+    }
+  ],
+  "social": {
+    "twitter": "https://twitter.com/nebula",
+    "youtube": "https://www.youtube.com/nebula",
+    "discord": "https://discord.gg/nebula"
+  }
+}
