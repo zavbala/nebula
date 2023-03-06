@@ -18,9 +18,14 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <link
+      rel="shortcut icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 100 100"><text y=".9em" font-size="90">🧑‍🚀</text></svg>'
+    />
   </head>
 
   <body class="font-sans">
@@ -28,14 +33,19 @@ const { title } = Astro.props;
       class:list={[
         THEME.base.join(" "),
         "h-[30vh] flex flex-col gap-y-5 text-white items-center justify-center",
+        "transition-all duration-75 ease-out",
       ]}
     >
-      <h1 class="md:text-6xl text-4xl font-bold">{title}</h1>
-      <small class="text-center">Last Updated on:</small>
+      <h1 class="md:text-7xl text-5xl font-bold">{title}</h1>
+      <small class="text-center text-sm"
+        >Last Updated on: {format(Date.now(), "dd/MM/yy")}</small
+      >
     </header>
 
-    <main class="m-auto max-w-4xl lg:p-0 p-5">
-      <slot />
+    <main class="">
+      <div class="m-auto max-w-2xl lg:max-w-4xl md:p-0 p-5">
+        <slot />
+      </div>
     </main>
 
     <Footer />

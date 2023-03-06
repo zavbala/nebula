@@ -20,6 +20,7 @@ const Switch = () => {
     >
       <button
         type="button"
+        aria-label="Switch to light mode"
         onClick={() => setDarkMode(false)}
         style={{ color: !darkMode ? ICON : "lightgray" }}
       >
@@ -39,6 +40,7 @@ const Switch = () => {
 
       <button
         type="button"
+        aria-label="Switch to dark mode"
         onClick={() => setDarkMode(true)}
         style={{ color: darkMode ? ICON : "lightgray" }}
       >

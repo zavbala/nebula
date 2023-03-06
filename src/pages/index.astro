@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Your new space adventure">
   <section
-    class="lg:h-screen p-5 flex items-center flex-col justify-around lg:gap-y-10 gap-y-7 transition-all duration-300 max-w-7xl m-auto"
+    class="lg:h-screen p-5 flex items-center flex-col justify-around lg:gap-y-10 gap-y-7 transition-all duration-75 ease-out max-w-7xl m-auto"
   >
     <div class="flex items-center flex-col justify-center gap-y-7">
       <Logo />
@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
         {App.description.join(" ")}
       </p>
 
-      <a href="" target="_blank">
+      <a href={App.stores.apple} target="_blank">
         <img
           class="w-52"
           alt="Apple Badge"

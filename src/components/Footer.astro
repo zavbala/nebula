@@ -6,7 +6,7 @@ import Switch from "./Switch";
 const Items = [
   {
     tagline: "Download",
-    href: "",
+    href: App.stores.apple,
   },
   {
     href: "/icon.png",
@@ -26,7 +26,12 @@ const Items = [
 const Style = "dark:text-white capitalize";
 ---
 
-<footer class:list={[THEME.footer, "bg-white p-5 dark:text-white"]}>
+<footer
+  class:list={[
+    THEME.footer,
+    "bg-white p-5 dark:text-white transition-all duration-75 ease-out",
+  ]}
+>
   <div
     class="flex items-center justify-between md:flex-row flex-col md:order-2 order-1 gap-3 m-auto h-full max-w-6xl"
   >
